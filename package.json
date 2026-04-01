@@ -12,9 +12,7 @@
   "bugs": "https://gitlab.dn-ms.ru/dnt-theme/reboot/-/issues",
   "keywords": [
     "dnt-theme",
-    "swiper",
-    "fancybox",
-    "forms"
+    "reboot"
   ],
   "scripts": {
     "dev": "vite",
