@@ -1,0 +1,11 @@
+.menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu.menu_horizontal {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}

@@ -1,0 +1,8 @@
+@mixin full-width($padding: null) {
+  width: calc(100% + var(--space-left) + var(--space-right));
+  margin-left: calc(0px - var(--space-left));
+  @if $padding != null {
+    padding-left: var(--space-left);
+    padding-right: var(--space-right);
+  }
+}

@@ -1,0 +1,26 @@
+// Single container class with breakpoint max-widths
+
+:root {
+  --space-left: 0px;
+  --space-right: 0px;
+}
+
+.container {
+  width: calc(100% - 2 * var(--container-padding));
+  --space-left: var(--container-padding);
+  --space-right: var(--container-padding);
+  margin-inline: auto;
+}
+
+// Responsive containers that are 100% wide until a breakpoint
+@each $breakpoint, $container-max-width in $container-max-widths {
+  @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+    .container {
+      --space-left: calc(50vw - #{$container-max-width} / 2);
+      --space-left: calc(50cqw - #{$container-max-width} / 2);
+      --space-right: calc(50vw - #{$container-max-width} / 2);
+      --space-right: calc(50cqw - #{$container-max-width} / 2);
+      max-width: $container-max-width;
+    }
+  }
+}
